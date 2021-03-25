@@ -1,9 +1,11 @@
+
 function* myGenerator() {
     yield insideGenerator1;
     yield insideGenerator2();
     yield insideGenerator3();
 
 }
+
 
 function* insideGenerator1() {
     
@@ -17,5 +19,8 @@ function* insideGenerator3() {
 
 }
 
-const iterator = insideGenerator1
+fifteenArray();
+const iterator = myGenerator();
+console.log(iterator.next());
+
 module.exports = { fifteenArray, myGenerator };
